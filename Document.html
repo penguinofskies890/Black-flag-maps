@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five-Page Scrolling Website</title>
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            background-color: #000; /* Fallback background color */
+        }
+
+        /* Container for all sections */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 500vh; /* Five viewport heights */
+        }
+
+        /* Individual sections */
+        .section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            color: white;
+            font-size: 3em;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+            padding-top: 10vh; /* Add padding to the top */
+        }
+
+        /* First section - Home */
+        .section-1 {
+            background-image: url('https://picfiles.alphacoders.com/500/500329.jpg'); /* Home background (GIF) */
+        }
+
+        /* Second section - Movies and Shows */
+        .section-2 {
+            background-image: url('https://images4.alphacoders.com/133/1337072.jpeg'); /* Movies and Shows background */
+        }
+
+        /* Third section - Anime */
+        .section-3 {
+            background-image: url('https://giffiles.alphacoders.com/220/220764.gif'); /* Anime background (GIF) */
+        }
+
+        /* Fourth section - Manga and Stuff */
+        .section-4 {
+            background-image: url('https://images7.alphacoders.com/129/1299477.jpg'); /* Manga and Stuff background (GIF) */
+        }
+
+        /* Fifth section - Games */
+        .section-5 {
+            background-image: url('https://images5.alphacoders.com/980/980647.jpg'); /* Games background */
+        }
+
+        /* Section titles */
+        .section h1 {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            padding: 20px 40px;
+            border-radius: 15px;
+            animation: glow 3s infinite alternate; /* Glowing neon animation */
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* Glowing neon animation with color change (40% dimmer) */
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px #00ff00, 0 0 18px #00ff00, 0 0 24px #00ff00;
+            }
+            25% {
+                text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px #ff00ff, 0 0 18px #ff00ff, 0 0 24px #ff00ff;
+            }
+            50% {
+                text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px #00ffff, 0 0 18px #00ffff, 0 0 24px #00ffff;
+            }
+            75% {
+                text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px #ffcc00, 0 0 18px #ffcc00, 0 0 24px #ffcc00;
+            }
+            100% {
+                text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px #ff0000, 0 0 18px #ff0000, 0 0 24px #ff0000;
+            }
+        }
+
+        /* Subtitle styling */
+        .subtitle {
+            font-size: 0.5em;
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            color: #ffcc00; /* Gold color for pirate theme */
+            max-width: 80%;
+            line-height: 1.5;
+        }
+
+        /* Unordered list styling */
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+            font-size: 0.4em;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        /* List item styling */
+        .section ul li {
+            margin: 15px 0;
+        }
+
+        /* Hyperlink styling */
+        .section ul li a {
+            color: #00ff00; /* Neon green color */
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            font-weight: bold;
+            cursor: pointer; /* Change cursor to pointer (hand icon) */
+        }
+
+        /* Hover effect for hyperlinks */
+        .section ul li a:hover {
+            color: #ff0000; /* Red color on hover */
+            text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section h1 {
+                font-size: 2em; /* Smaller font size for mobile */
+                padding: 15px 30px;
+            }
+
+            .subtitle {
+                font-size: 0.4em; /* Smaller font size for mobile */
+                padding: 10px 20px;
+            }
+
+            .section ul {
+                font-size: 0.35em; /* Smaller font size for mobile */
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- First Section - Home -->
+        <div class="section section-1">
+            <h1>Ahoy, me fellow pirates of the grand internet!</h1>
+            <div class="subtitle">
+                Gather 'round, for I bring ye a map to the finest treasures this vast digital sea has to offer—movies, anime, manga, games, and untold internet joys, all ripe for the taking! But beware, for treacherous waters be filled with false havens and dangers unknown. Sail wisely, claim yer bounty, and may the winds of fortune ever be in yer favor!<br><br>
+                If ye be wishin' to add to this grand map, feel free to send a message to me at <a href="mailto:dhruvkumary892@gmail.com" style="color: #00ff00; text-decoration: underline;">dhruvkumary892@gmail.com</a>. Fair winds and full sails, me hearties! Arrr!<br><br>
+                Ahoy, me hearties! Beware the cursed traps of the digital seas—foul ads and pop-up scoundrels lurk in these waters! To fend off these pesky bilge rats, arm yerselves with <a href="https://brave.com/" target="_blank" style="color: #00ff00; text-decoration: underline;">Brave</a> or <a href="https://ublockorigin.com/" target="_blank" style="color: #00ff00; text-decoration: underline;">uBlock Origin</a>, trusty shields against the blight of the web! Stay sharp, sail safe, and let no scurvy ad stand in yer way! Arrr!
+            </div>
+        </div>
+
+        <!-- Second Section - Movies and Shows -->
+        <div class="section section-2">
+            <h1>Movies and Shows</h1>
+            <div class="subtitle">Here are some websites that should do-</div>
+            <ul>
+                <li><a href="https://www.rgshows.me/?p=1" target="_blank">RG SHOWS</a></li>
+                <li><a href="https://novafork.com/" target="_blank">NOVAFORK</a></li>
+                <li><a href="https://www.vidbinge.com/" target="_blank">VID BINGE</a></li>
+                <li><a href="https://pstream.org/" target="_blank">P-STREAM</a></li>
+                <li><a href="https://catflix.su/home" target="_blank">CATFLIX</a></li>
+                <li><a href="https://cinemadeck.com/" target="_blank">CINEMA DECK</a></li>
+                <li><a href="https://www.popcornmovies.to/home" target="_blank">POPCORN MOVIES</a></li>
+                <li><a href="https://nepu.to/" target="_blank">RAR.TO NEPU</a></li>
+                <li><a href="https://freek.to/" target="_blank">FREEK</a></li>
+                <li><a href="https://www.cinebook.xyz/" target="_blank">CINEBOOK</a></li>
+                <li><a href="https://xprime.tv/" target="_blank">XPRIME</a></li>
+            </ul>
+        </div>
+
+        <!-- Third Section - Anime -->
+        <div class="section section-3">
+            <h1>Anime</h1>
+            <div class="subtitle">Ahoy, me hearties! I bring ye a trove of anime riches—sites teeming with grand tales! Feast yer eyes and enjoy, but guard 'em well, for the seas be ever shifting!</div>
+            <ul>
+                <li><a href="https://www.miruro.tv/" target="_blank">MIRJRO TV</a></li>
+                <li><a href="https://hianime.to/home" target="_blank">HIANIME</a></li>
+                <li><a href="https://yukiwatch.su/home" target="_blank">YUKI WATCH</a></li>
+                <li><a href="https://freek.to/explore/anime" target="_blank">FREEK ANIME</a></li>
+                <li><a href="https://kaido.to/home" target="_blank">KAIDO</a></li>
+                <li><a href="https://rivekun.rivestream.live/" target="_blank">RIVEKUN</a></li>
+            </ul>
+        </div>
+
+        <!-- Fourth Section - Manga and Stuff -->
+        <div class="section section-4">
+            <h1>Manga and Stuff</h1>
+            <div class="subtitle">Ahoy, me hearties! I bring ye a trove of manga riches—sites teeming with grand tales! Feast yer eyes and enjoy, but guard 'em well, for the seas be ever shifting!</div>
+            <ul>
+                <li><a href="https://mangadex.org/" target="_blank">MANGA DEX</a></li>
+                <li><a href="https://comick.io/home2" target="_blank">COMICK</a></li>
+                <li><a href="https://mangareader.to/home" target="_blank">MANGA READER</a></li>
+                <li><a href="https://mangago.me/" target="_blank">MANGAG</a></li>
+                <li><a href="https://allmanga.to/manga?cty=ALL" target="_blank">MANGAFIRE.TO</a></li>
+                <li><a href="https://allmanga.to/manga?cty=ALL" target="_blank">ALL MANGA</a></li>
+                <li><a href="https://mangakakalot.com/" target="_blank">MANGAKAKALOT</a></li>
+                <li><a href="https://asuracomic.net/" target="_blank">ASURACOMIC</a></li>
+            </ul>
+        </div>
+
+        <!-- Fifth Section - Games -->
+        <div class="section section-5">
+            <h1>Games</h1>
+            <div class="subtitle">Ahoy, me hearties! I bring ye a trove of gaming riches—worlds full of adventure and glory! Set sail, play to yer heart’s content, but guard 'em well, for the seas be ever shifting!</div>
+            <ul>
+                <li><a href="https://fitgirl-repacks.site/popular-repacks-of-the-year/" target="_blank">FITGIRL REPACKS</a></li>
+                <li><a href="https://dodi-repacks.site/" target="_blank">DODI REPACKS</a></li>
+                <li><a href="https://www.elamigos-games.net/" target="_blank">ElAmigos</a></li>
+                <li><a href="https://kaoskrew.org/home" target="_blank">KaOsKrew</a></li>
+                <li><a href="https://repack-mechanics.com/" target="_blank">R.G. Mechanics</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
